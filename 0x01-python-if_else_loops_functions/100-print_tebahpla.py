@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for ch in range(122, 96, -1):
-    print("{:c}".format(ch - 32) if ch % 2 != 0 else "{:c}".format(ch), end="")
+for c in range(122, 96, -1):
+    print("{:c}".format(c - 32) if c % 2 != 0 else "{:c}".format(c), end="")
