@@ -1,9 +1,3 @@
 #!/usr/bin/python3
-
-for c in range(ord('z'), ord('A') - 1, -1):
-    if c % 2 == 0:
-        print(chr(c), end="")
-    else:
-        print(chr(c).upper(), end="")
-
-print()  
+for ch in range(122, 96, -1):
+    print("{:c}".format(ch - 32) if ch % 2 != 0 else "{:c}".format(ch), end="")
