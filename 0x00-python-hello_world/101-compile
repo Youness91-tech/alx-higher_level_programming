@@ -1,2 +1,9 @@
 #!/bin/bash
-python3 -m compileall -b $PYFILE i
+python3 -c "
+import py_compile
+
+source = '$PYFILE'
+output = source + 'c'
+
+py_compile.compile(source, output)
+"
