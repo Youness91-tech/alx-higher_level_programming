@@ -8,19 +8,19 @@
  **/
 int check_cycle(listint_t *list)
 {
-	listint_t *turtle = list;
-	listint_t *rabbit = list;
+	listint_t *tortoise = list;
+	listint_t *hare = list;
 
 	if (list == NULL)
 	{
 		return (0);
 	}
 
-	while (turtle != NULL && rabbit != NULL && rabbit->next != NULL)
+	while (tortoise != NULL && hare != NULL && hare->next != NULL)
 	{
-		rabbit = rabbit->next->next;
-		turtle = turtle->next;
-		if (turtle == rabbit)
+		hare = hare->next->next;
+		tortoise = tortoise->next;
+		if (tortoise == hare)
 			return (1);
 	}
 
