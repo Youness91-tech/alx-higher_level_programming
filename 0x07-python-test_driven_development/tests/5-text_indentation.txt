@@ -1,0 +1,24 @@
+"5-text_indentation" module test cases
+--------------------------------------
+
+import module:
+	>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Test text with each seperator:
+    >>> text_indentation("    Woah now.    This is messy.   ")
+    Woah now.
+    <BLANKLINE>
+    This is messy.
+    <BLANKLINE>
+
+Test two arguments:
+    >>> text_indentation("hello.my.baby", "Oh:no,my?pants")
+    Traceback (most recent call last):
+        File "<stdin>", line 1, in <module>
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+Test other other data types:
+    >>> text_indentation(5)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
