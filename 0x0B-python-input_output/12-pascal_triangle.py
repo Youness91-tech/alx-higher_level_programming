@@ -9,7 +9,7 @@ def pascal_triangle(n):
         return []
 
     trngl = [[1]]
-    while len(tritrnglangle) != n:
+    while len(trngl) != n:
         prev_r = trngl[-1]
         new_r = [1]
         for x in range(len(prev_r) - 1):
